@@ -5,8 +5,17 @@ angular.module('shortly.services', [])
   var getLinks = function (cb) {
     return $http.get('/api/links');
   };
+
+  var addLink = function (url) {
+    console.log("url from addLink: ", url);
+    return $http.post('/api/links', {
+      url: url
+    });
+  };
+
   return {
-    getLinks: getLinks
+    getLinks: getLinks,
+    addLink: addLink
   };
 })
 .factory('Auth', function ($http, $location, $window) {
