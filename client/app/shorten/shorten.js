@@ -8,5 +8,5 @@ angular.module('shortly.shorten', [])
     //something
     Links.addLink(url);
     //something else
-  }
+  };
 });
